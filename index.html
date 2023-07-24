@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <div class="wrapper">
+       <h4> Конвертер валют </h4>
+       <div class="header">  
+           <select> 
+               <option >Нал </option>
+               <option > Безнал </option>
+
+           </select>
+
+           <div class="data"> <h6> 28.08.2023 </h6> </div> 
+       </div> 
+        <div class="changer">
+                <h5> Меняю</h5>
+             <form class="inner_val">  
+                
+                 <input type="number"  class="amount"> 
+                 <select class="valute1"> 
+                     <option> UAH  </option>
+                   
+                </select>
+                 
+             </form> 
+        <div class="buttons">
+             <button class="calculate"> =  </button>
+             <button class="reverse"> &#8645; </button>
+        </div>
+        <h5> Получаю </h5>
+        <form class="output_val">  
+                
+                <input type="number"  class="output" disabled = 'true'> 
+                <select class="valute2" > 
+                       
+                        <option>  USD </option>
+                        <option>  EUR </option>
+                        <option>  CAD </option>
+                   </select>
+                
+            </form> 
+        </div> 
+        <footer>  </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
