@@ -96,8 +96,8 @@ class Exchanger{
    fetch(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=${this.temp}&date=&${this.getDataForAPI()}&json `).
    then(response => response.json()).
    then(response => {
-        
-        document.querySelector('.output').value = this.amount / parseInt(response[0].rate) 
+        let rez = this.amount / response[0].rate
+        document.querySelector('.output').value = parseInt(rez)
 
         document.querySelector('footer').insertAdjacentHTML('beforeend' , ` По курсу ${response[0].rate}
           ГРН за ${response[0].txt}`)
@@ -113,8 +113,8 @@ class Exchanger{
    fetch(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=${this.temp}&date=&${this.getDataForAPI()}&json `).
    then(response => response.json()).
    then(response => {
-        
-        document.querySelector('.output').value = this.amount * parseInt(response[0].rate) 
+         let rez =  this.amount * response[0].rate
+        document.querySelector('.output').value = parseInt(rez)
         
         document.querySelector('footer').insertAdjacentHTML('beforeend' , ` По курсу ${response[0].rate} 
          ГРН за ${response[0].txt}`)
